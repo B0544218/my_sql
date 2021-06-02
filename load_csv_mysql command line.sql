@@ -6,9 +6,14 @@
 #  在cmd輸入 mysql --local-infile=1 -u root -p
 
 use 某一database;
+# 請先創建TABLE discounts(和相對應column) 再執行以下LOAD指令
 LOAD DATA local INFILE 'C:\\worksp\\mysql\\discounts.csv' 
 INTO TABLE discounts 
+# 文件的字段由逗號表示
 FIELDS TERMINATED BY ','
+# 每個字段都用雙引號括起來
 ENCLOSED BY '"'
+# CSV文件的每一行都由指示换行符號 终止
 LINES TERMINATED BY '\n'
+# 忽略第一行標題
 IGNORE 1 ROWS;
