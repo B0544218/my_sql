@@ -26,4 +26,8 @@ select sum(amount), month from transactions where branch = 'BeiJing' or branch =
 
 # sub sql
 use demo;
+# 如果name 不重複的話可以這樣做
 select name, age from employees where name = (select name from employee_loc where location='XiHu');
+# 如果name 重複的話可以用limit N 或any(sub query)
+#select name, age from employees where name = any(select name from employee_loc where location='XiHu');
+#select name, age from employees where name = (select name from employee_loc where location='XiHu' limit 3);
