@@ -7,3 +7,11 @@ select c.name, sum(c.employees), e.year
 select c.name, max(c.employees), e.year 
 	from company as c join established as e 
 						on c.name = e.name group by c.name;
+						
+						
+
+--SELECT "user_profile".real_name ,"user".*
+--FROM "user" 
+--INNER JOIN "user_profile"
+--ON "user".id ="user_profile".user_id 
+--where "user_profile".real_name is not null 
