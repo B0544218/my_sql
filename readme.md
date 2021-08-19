@@ -8,10 +8,10 @@ use test_DB;
 
 ## 安裝玩Mysql後
 - mysql -u root
-- (輸入密碼)
+- (安裝mysql時輸入的密碼)
 - UPDATE mysql.user SET authentication_string=null WHERE User='root';
 - FLUSH PRIVILEGES;
 - exit;
 
 - mysql -u root
-- ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'yourpasswd';
+- ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '某個DB的密碼(我用實驗室的名稱當作密碼)';
