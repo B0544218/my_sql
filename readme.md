@@ -7,7 +7,7 @@ use test_DB;
 (在mysql command line)source C:\...\backup_table.sql
 
 ## 安裝玩Mysql後
-- mysql -u root
+- mysql -u root -p
 - (安裝mysql時輸入的密碼)
 - UPDATE mysql.user SET authentication_string=null WHERE User='root';
 - FLUSH PRIVILEGES;
@@ -15,3 +15,4 @@ use test_DB;
 
 - mysql -u root
 - ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '某個DB的密碼(我用實驗室的名稱當作密碼)';
+- (以後都是用- mysql -u root -p ，enter後，用某個DB的密碼登入)
